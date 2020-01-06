@@ -28,7 +28,7 @@ public class Addition {
                 "      <title>HTML Image as link</title>\n" +
                 "   </head>\n" +
                 "   <body>\n"+
-"<p> MORDY GREY THE SLEEPY DEVELOPER</p>"+
+"<p> MORDY GREY THE CAT THE SLEEPY DEVELOPER</p>"+
                 "         <img src=\"https://picsum.photos/1200/1300\"\n" +
                 "         width=1000\" height=\"800\">\n" +
                 "      </a>\n" +
