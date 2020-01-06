@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mordy
+  name: mordy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mordyrepo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mordyrepo
+    spec:
+      containers:
+      - image: adnansee/mordyrepo:1.0
+        name: mordyrepo
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mordy
+  name: mordy
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: mordyrepo
+  type: LoadBalancer
+status:
+  loadBalancer: {}
